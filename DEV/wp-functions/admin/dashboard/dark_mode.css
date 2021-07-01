@@ -1,0 +1,78 @@
+html.dark-mode-active {
+  --L0: #23282d;
+  --L1: #32373c;
+}
+html.dark-mode-active .wp-core-ui .attachment-preview {
+  background-color: var(--L1);
+}
+
+/* Media Library Plugin */
+html.dark-mode-active .aiot-tree .aiot-nodes .aiot-node.aiot-active {
+  background: linear-gradient(
+    to right,
+    rgba(35, 40, 45, 0) 30px,
+    var(--L1) 30%,
+    var(--L1) 100%
+  );
+}
+html.dark-mode-active .aiot-theme-wordpress {
+  border-right: 1px solid var(--L1);
+}
+html.dark-mode-active .aiot-tree .aiot-split-collapse,
+html.dark-mode-active .aiot-tree .aiot-split-resizer {
+  background-color: var(--L1);
+}
+html.dark-mode-active .aiot-theme-wordpress .aiot-nodes .aiot-node-icon i {
+  background: var(--L0) !important;
+  border-top: 3px solid var(--L0) !important;
+  border-bottom: 3px solid var(--L0) !important;
+}
+html.dark-mode-active .ant-checkbox-inner {
+  background-color: var(--L0);
+  border-color: var(--L1);
+}
+html.dark-mode-active .aiot-tree .aiot-nodes ul:after {
+  border-right-color: #2b2b2b;
+  border-left-color: #323232;
+}
+html.dark-mode-active .aiot-tree .aiot-nodes .aiot-node .aiot-node-count,
+.aiot-tree .aiot-nodes .aiot-node button {
+  background-color: #1c1d1e;
+}
+html.dark-mode-active .aiot-tree .aiot-expander:after {
+  background-color: #2f2f2f;
+}
+html.dark-mode-active .aiot-tree .aiot-fixed-header > div {
+  background-color: var(--L0);
+}
+html.dark-mode-active .aiot-tree .aiot-toolbar {
+  background-color: var(--L1);
+  border-color: #2d2d2d;
+}
+html.dark-mode-active .aiot-tree .aiot-fixed-header.active > div .aiot-toolbar {
+  border-color: var(--L1);
+}
+html.dark-mode-active.dark-mode-active
+  .ant-checkbox-checked
+  .ant-checkbox-inner:after {
+  border-color: #0073aa;
+}
+html.dark-mode-active .aiot-tree hr {
+  border-top-color: #2b2b2b;
+  border-bottom-color: #323232;
+}
+html.dark-mode-active.dark-mode-active
+  body:not(.gutenberg-editor-page)
+  .button-primary,
+html.dark-mode-active.dark-mode-active
+  body:not(.gutenberg-editor-page)
+  .page-title-action,
+html.dark-mode-active.dark-mode-active
+  body:not(.gutenberg-editor-page)
+  .wrap
+  a.page-title-action,
+html.dark-mode-active.dark-mode-active
+  body:not(.gutenberg-editor-page).wp-core-ui
+  .button-primary {
+  transition: all 0.3s;
+}

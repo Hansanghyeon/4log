@@ -1,0 +1,108 @@
+$base: (
+  // GrayScale Dark
+  gd0: #12171f,
+  gd1: #161a23,
+  gd2: #181c27,
+  gd3: #1f2330,
+  gd4: #252836,
+  gd5: #303645,
+  // GrayScale Light
+  gl0: #cdd9e5,
+  gl1: #adbac7,
+  gl2: #909dab,
+  gl3: #768390,
+  gl4: #636e7b,
+  gl5: #545d68,
+  gl6: #444c56,
+  gl7: #373e47,
+  gl8: #2d333b,
+  gl9: #22272e,
+  // Base PointColor
+  ColoroftheYear1: #939597,
+  ColoroftheYear2: #f5df4d
+);
+
+$light: (
+  // PointColor
+  primary: #0f4c81,
+  pointColor0: #ffa500,
+  pointColor1: #eb5757,
+  // BG
+  bg0: #fff,
+  bg1: #e7e7e7,
+  // Text
+  text00: #000,
+  text0: #333,
+  text1: #0c0c0c,
+  text2: #161616,
+  text3: #dcdcdc,
+  // Code
+  codeBg: #e2e2e2,
+  codeColor: #eb5757,
+  preBg: #e2e2e2
+);
+
+$cloudy: (
+  // PointColor
+  primary: #0f4c81,
+  pointColor0: #e8aa8c,
+  pointColor1: #5e616a,
+  // BG
+  bg0: #fff,
+  bg1: #415865,
+  // Text
+  text-primary: #333,
+  text00: #000,
+  text0: #333,
+  text1: #4a4f57,
+  text2: #868e96,
+  text3: #dcdcdc,
+  // Code
+  codeBg: #ffe1b6,
+  codeColor: #5e616a,
+  preBg: #ffe1b6
+);
+
+$dark: (
+  // PointColor
+  primary: #fff46a,
+  pointColor0: #ffa500,
+  pointColor1: #eb5757,
+  // BG
+  bg0: #2d333b,
+  bg1: #22272e,
+  // Text
+  text-primary: #adbac7,
+  text00: #fff,
+  text0: #768390,
+  text1: #adbac7,
+  text2: #cdd9e5,
+  text3: #515151,
+  // Code
+  codeBg: #1d1f21,
+  codeColor: #f92672,
+  preBg: #232326
+);
+
+:root {
+  @include generate_colors($base);
+  @include generate_colors($light);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    @include generate_colors($light);
+  }
+}
+
+body.cloudy {
+  @media (prefers-color-scheme: light) {
+    @include generate_colors($cloudy);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include generate_colors($dark);
+  }
+}

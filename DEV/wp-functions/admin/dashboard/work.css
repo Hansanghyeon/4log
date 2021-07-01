@@ -1,0 +1,6 @@
+body.ac-work .post-state {
+  display: none;
+}
+body.ac-work td.column-title strong {
+  font-size: 0;
+}

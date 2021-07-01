@@ -1,0 +1,84 @@
+.wp-admin #wpadminbar #wp-admin-bar-site-name > .ab-item:before {
+  content: none;
+}
+
+/* DarkMode Switcher */
+/* 
+<div class="dark-mode-switch dark-mode-ignore"><label class="dayNight"><input type="checkbox"><div></div></label></div>
+*/
+html #wp-admin-bar-dark-mode-switch .dark-mode-switch {
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto !important;
+  height: 100%;
+
+  margin-left: 5px !important;
+  margin-right: 5px !important;
+}
+
+html .wp-admin #wpadminbar .dayNight {
+  all: unset;
+  cursor: pointer;
+}
+html .wp-admin #wpadminbar .dayNight input {
+  display: none;
+}
+html .wp-admin #wpadminbar .dayNight input + div {
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  position: relative;
+  box-shadow: inset 8px -8px 0 0 #fff;
+  transform: scale(1) rotate(-2deg);
+  transition: box-shadow 0.5s ease 0s, transform 0.4s ease 0.1s;
+}
+html .wp-admin #wpadminbar .dayNight input + div:before {
+  content: '';
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: background 0.3s ease;
+}
+html .wp-admin #wpadminbar .dayNight input + div:after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin: -4px 0 0 -4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  box-shadow: 0 -23px 0 #fedf3e, 0 23px 0 #fedf3e, 23px 0 0 #fedf3e,
+    -23px 0 0 #fedf3e, 15px 15px 0 #fedf3e, -15px 15px 0 #fedf3e,
+    15px -15px 0 #fedf3e, -15px -15px 0 #fedf3e;
+  transform: scale(0);
+  transition: all 0.3s ease;
+}
+html .wp-admin #wpadminbar .dark-mode-switch:not(.active) .dayNight > div {
+  box-shadow: inset 32px -32px 0 0 #fff;
+  transform: scale(0.5) rotate(0deg);
+  transition: transform 0.3s ease 0.1s, box-shadow 0.4s ease 0s;
+}
+html
+  .wp-admin
+  #wpadminbar
+  .dark-mode-switch:not(.active)
+  .dayNight
+  > div:before {
+  background: #fedf3e;
+  transition: background 0.3s ease 0.1s;
+}
+html
+  .wp-admin
+  #wpadminbar
+  .dark-mode-switch:not(.active)
+  .dayNight
+  > div:after {
+  transform: scale(0.8);
+  transition: transform 0.5s ease 0.15s;
+}

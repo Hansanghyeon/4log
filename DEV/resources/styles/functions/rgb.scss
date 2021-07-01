@@ -1,0 +1,16 @@
+@function hexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+
+@mixin generate_colors($colors) {
+  // Colors, RGB Colors
+  @each $color, $value in $colors {
+    @if str-slice(#{$value}, 1, 1) == '#' {
+      --#{$color}: #{$value};
+      --RGB-#{$color}: #{hexToRGB($value)};
+    } @else {
+      --#{$color}: var(--#{$value});
+      --RGB-#{$color}: var(--RGB-#{$value});
+    }
+  }
+}

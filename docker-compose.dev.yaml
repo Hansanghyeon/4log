@@ -23,6 +23,7 @@ services:
     volumes:
       - ./.wordpress:/var/www/html
       - ./Theme:/var/www/html/wp-content/themes/sage
+      - ./DEV:/var/www/html/wp-content/themes/dev
       - ./backup:/var/www/html/wp-content/ai1wm-backups
     external_links:
       - DB__wordpress:mariadb
